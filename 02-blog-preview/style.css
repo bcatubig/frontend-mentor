@@ -30,6 +30,7 @@
   max-width: 350px;
   border-radius: 1rem;
   padding: 1rem;
+  filter: drop-shadow(10px 10px 0 #000000);
 }
 
 .preview {
@@ -55,6 +56,5 @@
   p {
     color: --clr-grey-950;
     font-weight: 600;
-    margin: 0;
   }
 }
