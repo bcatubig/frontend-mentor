@@ -31,6 +31,7 @@
   border-radius: 1rem;
   padding: 1rem;
   filter: drop-shadow(10px 10px 0 #000000);
+  border: 1px solid var(--clr-grey-950);
 }
 
 h2 {
@@ -41,7 +42,7 @@ h2 {
 .card-content {
   color: var(--clr-grey-500);
   font-size: 0.9rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .preview {
@@ -83,5 +84,6 @@ h2 {
     color: --clr-grey-950;
     font-weight: 600;
     font-size: 0.9rem;
+    line-height: 1.6;
   }
 }
