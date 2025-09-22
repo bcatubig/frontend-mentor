@@ -1,0 +1,60 @@
+@layer base {
+  :root {
+    --clr-yellow: hsl(47, 88%, 63%);
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-grey-500: hsl(0, 0%, 42%);
+    --clr-grey-950: hsl(0, 0%, 7%);
+    --ff-base: "Figtree", sans-serif;
+  }
+
+  html {
+    font-family: var(--ff-base);
+    line-height: 1.6;
+  }
+
+  body {
+    background-color: var(--clr-yellow);
+  }
+}
+
+@layer layout {
+  .wrapper {
+    display: grid;
+    place-content: center;
+    height: 100dvh;
+  }
+}
+
+.card {
+  background-color: var(--clr-white);
+  max-width: 350px;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.preview {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.tag {
+  display: inline-block;
+  background-color: var(--clr-yellow);
+  padding: 5px;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  img {
+    width: 70%;
+  }
+
+  p {
+    color: --clr-grey-950;
+    font-weight: 600;
+    margin: 0;
+  }
+}
