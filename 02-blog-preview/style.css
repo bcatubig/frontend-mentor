@@ -33,28 +33,55 @@
   filter: drop-shadow(10px 10px 0 #000000);
 }
 
+h2 {
+  margin-bottom: 1rem;
+  color: var(--clr-grey-950);
+}
+
+.card-content {
+  color: var(--clr-grey-500);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
 .preview {
+  display: block;
   width: 100%;
   border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+.tags {
+  margin-bottom: 1rem;
+  color: var(--clr-grey-950);
+  font-weight: 900;
 }
 
 .tag {
   display: inline-block;
+  font-size: 0.9rem;
   background-color: var(--clr-yellow);
-  padding: 5px;
+  padding: 10px;
+}
+
+.date {
+  font-size: 0.9rem;
+  color: var(--clr-grey-950);
 }
 
 .author {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
 
   img {
-    width: 70%;
+    display: inline-block;
+    margin-right: 0.5rem;
+    width: 3rem;
   }
 
   p {
     color: --clr-grey-950;
     font-weight: 600;
+    font-size: 0.9rem;
   }
 }
