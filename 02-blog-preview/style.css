@@ -38,7 +38,7 @@
 .card {
   max-width: 384px;
   background-color: var(--clr-white);
-  padding: 1rem;
+  padding: 1.5rem;
   border-radius: var(--radius-lg);
   border: 1px solid var(--clr-grey-950);
   filter: drop-shadow(10px 10px 0 var(--clr-grey-950));
@@ -72,11 +72,13 @@
 .card__title {
   font-size: var(--font-lg);
   color: var(--clr-grey-950);
+  font-weight: 800;
 }
 
 .card__date {
   color: var(--clr-grey-950);
   font-size: var(--font-md);
+  font-weight: 500;
 }
 
 .card__footer {
@@ -103,6 +105,7 @@
 .card__copy {
   color: var(--clr-grey-500);
   font-size: var(--font-md);
+  font-weight: 500;
 }
 
 .card__aside {
@@ -120,6 +123,11 @@
 }
 
 .card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .card__tag {
