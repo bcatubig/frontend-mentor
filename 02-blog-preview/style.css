@@ -31,6 +31,7 @@
     display: grid;
     place-content: center;
     height: 100dvh;
+    margin: 0.5rem;
   }
 }
 
@@ -41,7 +42,19 @@
   border-radius: var(--radius-lg);
   border: 1px solid var(--clr-grey-950);
   filter: drop-shadow(10px 10px 0 var(--clr-grey-950));
-  margin: 0.5rem;
+
+  @media (width < 375px) {
+    width: 324px;
+  }
+}
+
+.card__link {
+  text-decoration: none;
+  color: var(--clr-grey-950);
+}
+
+.card__link:hover {
+  color: var(--clr-yellow);
 }
 
 .card__aside {
