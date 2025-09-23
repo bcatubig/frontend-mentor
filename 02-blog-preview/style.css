@@ -44,7 +44,7 @@
   filter: drop-shadow(10px 10px 0 var(--clr-grey-950));
 
   @media (width < 375px) {
-    width: 324px;
+    width: 100%;
   }
 }
 
@@ -73,12 +73,20 @@
   font-size: var(--font-lg);
   color: var(--clr-grey-950);
   font-weight: 800;
+
+  @media (width < 324px) {
+    font-size: 20px;
+  }
 }
 
 .card__date {
   color: var(--clr-grey-950);
   font-size: var(--font-md);
   font-weight: 500;
+
+  @media (width < 324px) {
+    font-size: 12px;
+  }
 }
 
 .card__footer {
@@ -137,4 +145,8 @@
   border-radius: var(--radius-xs);
   padding: 4px 12px;
   font-weight: 800;
+
+  @media (width < 324px) {
+    font-size: 12px;
+  }
 }
