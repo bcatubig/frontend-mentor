@@ -13,38 +13,50 @@
     />
 
     <title>Frontend Mentor | Blog preview card</title>
-    <!-- <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
-      integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    /> -->
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="wrapper">
-      <div class="card">
-        <img
-          class="preview"
-          src="assets/images/illustration-article.svg"
-          alt=""
-        />
-        <div class="tags">
-          <span class="tag">Learning</span>
-        </div>
-        <div class="date">Published 21 Dec 2023</div>
-        <h2 class="title">HTML & CSS foundations</h2>
-        <p class="card-content">
-          These languages are the backbone of every website, defining structure,
-          content, and presentation.
-        </p>
-        <div class="author">
-          <img src="assets/images/image-avatar.webp" alt="" />
-          <p>Greg Hooper</p>
-        </div>
+    <main>
+      <div class="wrapper">
+        <article class="card">
+          <aside class="card__aside">
+            <figure class="card__figure">
+              <img
+                src="assets/images/illustration-article.svg"
+                alt="Blog preview image"
+                class="card__image"
+              />
+            </figure>
+          </aside>
+
+          <header class="card__header">
+            <div class="card__tags">
+              <span class="card__tag">Learning</span>
+            </div>
+            <h2 class="card__title">HTML & CSS foundations</h2>
+            <p class="card__date">Published 21 Dec 2023</p>
+          </header>
+
+          <div class="card__body">
+            <p class="card__copy">
+              These languages are the backbone of every website, defining
+              structure, content, and presentation.
+            </p>
+          </div>
+
+          <footer class="card__footer">
+            <div class="card__author">
+              <img
+                class="card__authorimage"
+                src="assets/images/image-avatar.webp"
+                alt=""
+              />
+              <p class="card__authorname">Greg Hooper</p>
+            </div>
+          </footer>
+        </article>
       </div>
-    </div>
+    </main>
   </body>
 </html>

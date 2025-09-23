@@ -7,6 +7,12 @@
     --clr-grey-500: hsl(0, 0%, 42%);
     --clr-grey-950: hsl(0, 0%, 7%);
     --ff-base: "Figtree", sans-serif;
+    --radius-lg: 1.25rem;
+    --radius-sm: 0.625rem;
+    --radius-xs: 0.25rem;
+    --font-sm: 0.875em;
+    --font-md: 1rem;
+    --font-lg: 1.5rem;
   }
 
   html {
@@ -29,59 +35,85 @@
 }
 
 .card {
+  max-width: 384px;
   background-color: var(--clr-white);
-  max-width: 350px;
-  border-radius: 1rem;
   padding: 1rem;
-  filter: drop-shadow(10px 10px 0 #000000);
+  border-radius: var(--radius-lg);
   border: 1px solid var(--clr-grey-950);
-
-  h2 {
-    color: var(--clr-grey-950);
-  }
+  filter: drop-shadow(10px 10px 0 var(--clr-grey-950));
+  margin: 0.5rem;
 }
 
-.card-content {
-  color: var(--clr-grey-500);
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
+.card__aside {
+  margin-block-end: 1rem;
 }
 
-.preview {
-  border-radius: 1rem;
-  margin-bottom: 1rem;
+.card__header {
+  margin-block-end: 1rem;
 }
 
-.tags {
-  margin-bottom: 1rem;
-  color: var(--clr-grey-950);
-  font-weight: 900;
+.card__body {
+  margin-block-end: 1rem;
 }
 
-.tag {
-  font-size: 0.9rem;
-  background-color: var(--clr-yellow);
-  padding: 0.5rem;
-  display: inline-block;
-}
-
-.date {
-  font-size: 0.9rem;
+.card__title {
+  font-size: var(--font-lg);
   color: var(--clr-grey-950);
 }
 
-.author {
+.card__date {
+  color: var(--clr-grey-950);
+  font-size: var(--font-md);
+}
+
+.card__footer {
+}
+
+.card__author {
   display: flex;
   align-items: center;
+  gap: 0.5rem;
+}
 
-  img {
-    margin-right: 0.5rem;
-    width: 50px;
-  }
+.card__authorimage {
+  width: 32px;
+  height: 32px;
+}
 
-  p {
-    color: --clr-grey-950;
-    font-weight: 700;
-    font-size: 0.9rem;
-  }
+.card__authorname {
+  font-size: var(--font-sm);
+  color: var(--clr-grey-950);
+  font-weight: 800;
+  margin: 0;
+}
+
+.card__copy {
+  color: var(--clr-grey-500);
+  font-size: var(--font-md);
+}
+
+.card__aside {
+}
+
+.card__figure {
+  padding: 0;
+  margin: 0;
+}
+
+.card__image {
+  border-radius: var(--radius-sm);
+  width: 100%;
+  display: block;
+}
+
+.card__tags {
+}
+
+.card__tag {
+  background-color: var(--clr-yellow);
+  color: var(--clr-grey-950);
+  font-size: var(--font-sm);
+  border-radius: var(--radius-xs);
+  padding: 4px 12px;
+  font-weight: bold;
 }
