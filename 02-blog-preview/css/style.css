@@ -31,10 +31,6 @@ body {
   font-family: var(--ff-figtree);
 }
 
-h1 {
-  font: var(--text-lg);
-}
-
 .stack > * + * {
   margin-block-start: 1rem;
 }
