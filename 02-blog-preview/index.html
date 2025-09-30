@@ -3,62 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="assets/images/favicon-32x32.png"
-    />
-
-    <title>Frontend Mentor | Blog preview card</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <main>
-      <div class="wrapper">
-        <article class="card">
-          <aside class="card__aside">
-            <figure class="card__figure">
-              <img
-                src="assets/images/illustration-article.svg"
-                alt="Blog preview image"
-                class="card__image"
-              />
-            </figure>
-          </aside>
-
-          <header class="card__header">
-            <div class="card__tags">
-              <span class="card__tag">Learning</span>
-              <span class="card__tag">HTML</span>
-              <span class="card__tag">CSS</span>
-            </div>
-            <p class="card__date">Published 21 Dec 2023</p>
-            <h2 class="card__title">
-              <a class="card__link" href="#">HTML & CSS foundations</a>
-            </h2>
-          </header>
-          <div class="card__body">
-            <p class="card__copy">
-              These languages are the backbone of every website, defining
-              structure, content, and presentation.
-            </p>
+    <div class="wrapper">
+      <section class="card stack">
+        <div>
+          <img
+            class="card__img"
+            src="assets/images/illustration-article.svg"
+            alt="Blog preview image"
+          />
+        </div>
+        <div class="card__content stack">
+          <div class="card__tags">
+            <span class="card__tag">Learning</span>
           </div>
 
-          <footer class="card__footer">
-            <div class="card__author">
-              <img
-                class="card__authorimage"
-                src="assets/images/image-avatar.webp"
-                alt=""
-              />
-              <p class="card__authorname">Greg Hooper</p>
-            </div>
-          </footer>
-        </article>
-      </div>
-    </main>
+          <p class="card__published">Published 21 Dec 2023</p>
+
+          <h2 class="card__header">
+            <a href="#" target="_blank" rel="noopener noreferrer"
+              >HTML & CSS foundations</a
+            >
+          </h2>
+          <p class="card__body">
+            These languages are the backbone of every website, defining
+            structure, content, and presentation.
+          </p>
+        </div>
+        <div class="card__about">
+          <img
+            class="card__avatar"
+            src="assets/images/image-avatar.webp"
+            alt=""
+          />
+          <p class="card__author">Greg Hooper</p>
+        </div>
+      </section>
+    </div>
   </body>
 </html>
