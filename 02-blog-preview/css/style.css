@@ -23,6 +23,7 @@
   display: grid;
   place-content: center;
   height: 100vh;
+  padding-inline: 1rem;
 }
 
 body {
