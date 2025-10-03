@@ -140,13 +140,18 @@
 
 @layer components {
   .profile {
-    max-width: 375px;
+    min-width: 384px;
     display: grid;
     gap: var(--space-300);
     background-color: var(--clr-grey-800);
-    padding: var(--space-300);
+    padding: var(--space-500);
     border-radius: var(--radius-md);
     text-align: center;
+
+    @media (width < 375px) {
+      padding: var(--space-300);
+      min-width: 327px;
+    }
   }
 
   .profile__img {
