@@ -127,11 +127,9 @@
 
 @layer layout {
   .wrapper {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px white;
+    display: grid;
+    min-height: 100vh;
+    place-content: center;
     padding: var(--space-300);
   }
 
@@ -141,15 +139,8 @@
 }
 
 @layer components {
-  .button {
-    &:hover {
-      background-color: "";
-      color: black;
-    }
-  }
-
   .profile {
-    max-width: 327px;
+    max-width: 375px;
     display: grid;
     gap: var(--space-300);
     background-color: var(--clr-grey-800);
@@ -158,11 +149,8 @@
     text-align: center;
   }
 
-  .profile > * {
-  }
-
   .profile__img {
-    display: block;
+    justify-self: center;
     width: 88px;
     height: 88px;
     border-radius: 100%;
@@ -176,7 +164,7 @@
     border-radius: 8px;
     padding: 0.75rem;
 
-    transition: 0.1s ease-in;
+    transition: 0.25s ease-in-out;
 
     &:hover {
       background-color: var(--clr-green);
@@ -190,15 +178,5 @@
     display: grid;
     list-style: none;
     gap: 1rem;
-  }
-
-  .profile__container {
-    display: grid;
-    justify-content: center;
-  }
-
-  .profile__header {
-    display: grid;
-    gap: 4px;
   }
 }
