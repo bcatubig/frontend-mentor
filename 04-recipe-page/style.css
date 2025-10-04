@@ -1,0 +1,121 @@
+@layer reset {
+  /* 1. Use a more-intuitive box-sizing model */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  /* 2. Remove default margin */
+  * {
+    margin: 0;
+  }
+
+  /* 3. Enable keyword animations */
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      interpolate-size: allow-keywords;
+    }
+  }
+
+  body {
+    /* 4. Add accessible line-height */
+    line-height: 1.5;
+    /* 5. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* 6. Improve media defaults */
+  img,
+  picture,
+  video,
+  canvas,
+  svg {
+    display: block;
+    max-width: 100%;
+  }
+
+  /* 7. Inherit fonts for form controls */
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  /* 8. Avoid text overflows */
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    overflow-wrap: break-word;
+  }
+
+  /* 9. Improve line wrapping */
+  p {
+    text-wrap: pretty;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --clr-brown-800: hsl(14, 45%, 36%);
+    --clr-rose-50: hsl(330, 100%, 98%);
+    --clr-rose-800: hsl(332, 51%, 32%);
+    --clr-stone-100: hsl(30, 54%, 90%);
+    --clr-stone-150: hsl(30, 18%, 87%);
+    --clr-stone-600: hsl(30, 10%, 34%);
+    --clr-stone-900: hsl(24, 5%, 18%);
+    --clr-white: hsl(0, 0, 100);
+
+    --s100: 05rem;
+    --s150: 0.75rem;
+    --s200: 1rem;
+    --s300: 1.5rem;
+    --s400: 2rem;
+    --s500: 2.5rem;
+    --s600: 3.75rem;
+    --s1600: 8rem;
+
+    --ff-young-serif: "Young Serif", serif;
+    --ff-outfit: "Outfit", sans-serif;
+
+    --font-size-heading-sm: ;
+    --font-size-heading-regular: ;
+    --font-size-heading-lg: ;
+    --font-size-heading-xl: ;
+
+    --font-size-sm: ;
+    --font-size-regular: ;
+    --font-size-lg: ;
+    --font-size-xl: ;
+
+    --font-weight-normal: 400;
+    --font-weight-semi-bold: 600;
+    --font-weight-bold: 700;
+
+    --border-radius-1: 24px;
+    --border-radius-2: 12px;
+    --border-radius-3: ;
+  }
+}
+
+@layer layout {
+  .stack > * + * {
+    margin-block-start: var(--s400);
+  }
+}
+
+@layer components {
+}
