@@ -226,6 +226,37 @@
     display: grid;
     gap: 1.5rem;
   }
+
+  .nutrition {
+    margin-block-end: 2.5rem;
+    table {
+      margin: 0;
+      padding: 0;
+      padding-inline-start: 2rem;
+      padding-inline-end: 1rem;
+      text-align: left;
+      border-collapse: collapse;
+    }
+
+    tr {
+      padding: 0;
+      margin: 0;
+    }
+
+    th {
+      font-weight: 400;
+      margin: 0;
+      padding: 0;
+      border-bottom: 1px solid var(--clr-stone-150);
+    }
+
+    td {
+      font-weight: 700;
+      padding: 0.75rem;
+      margin: 0;
+      border-bottom: 1px solid var(--clr-stone-150);
+    }
+  }
 }
 
 @layer utils {
