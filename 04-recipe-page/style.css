@@ -143,11 +143,11 @@
   }
 
   .wrapper {
-    --wrapper-max-width: 1200px;
-    --wrapper-padding: 1rem;
+    --wrapper-max-width: 100%;
+    --wrapper-padding: 2rem;
 
     max-width: var(--wrapper-max-width);
-    padding-inline: 2rem;
+    padding-inline: var(--wrapper-padding);
   }
 }
 
