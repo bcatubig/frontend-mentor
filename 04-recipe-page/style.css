@@ -270,10 +270,6 @@
       color: var(--clr-brown-800);
       border-bottom: 1px solid var(--clr-stone-150);
       padding-block: 0.75rem;
-
-      @media (width > 375px) {
-        padding: 0;
-      }
     }
 
     & th {
