@@ -122,13 +122,32 @@
   }
 }
 
+@layer layout {
+  .wrapper {
+    @media (width > 375px) {
+      display: grid;
+      place-content: center;
+      min-height: 100vh;
+      padding-block: 128px;
+      padding-inline: 2.5rem;
+    }
+  }
+}
+
 @layer components {
   .card {
     background-color: var(--clr-white);
 
     @media (width > 375px) {
+      max-width: 736px;
       padding: 2rem;
       border-radius: 1.5rem;
+    }
+  }
+
+  .card__image {
+    @media (width > 375px) {
+      border-radius: 0.75rem;
     }
   }
 
@@ -139,6 +158,11 @@
     box-sizing: content-box;
     display: grid;
     gap: 2rem;
+
+    @media (width > 375px) {
+      margin-inline: unset;
+      max-width: unset;
+    }
   }
 
   .card__title {
@@ -149,6 +173,10 @@
     line-height: 1;
     letter-spacing: 0;
     margin-block-end: 2rem;
+
+    @media (width > 375px) {
+      font-size: 2.5rem;
+    }
   }
 
   .card__prep {
@@ -156,12 +184,12 @@
     border-radius: 0.75rem;
     padding: 1.5rem;
 
-    span {
+    & span {
       font-size: 1rem;
       font-weight: 700;
     }
 
-    h3 {
+    & h3 {
       color: var(--clr-rose-800);
       font-weight: 600;
       font-size: 1.25rem;
@@ -169,14 +197,95 @@
       margin-block-end: 1rem;
     }
 
-    ul {
+    & ul {
       margin: 0;
       padding-inline-start: 1.4rem;
     }
 
-    li {
+    & li {
       margin: 0;
       padding-inline-start: 1rem;
+    }
+  }
+
+  .section {
+    & h2 {
+      font-family: var(--ff-young-serif);
+      color: var(--clr-brown-800);
+      font-size: 1.75rem;
+      font-weight: 400;
+      line-height: 1;
+      margin-block-end: 1.5rem;
+    }
+
+    & strong {
+      font-weight: 700;
+    }
+  }
+
+  .ingredients {
+    ul {
+      margin: 0;
+      padding-inline-start: 1.5rem;
+    }
+
+    li {
+      margin: 0;
+      padding: 0;
+      padding-inline-start: 1rem;
+      margin-block-end: 0.5rem;
+    }
+  }
+
+  .instructions {
+    ol {
+      margin: 0;
+      padding: 0;
+      padding-inline-start: 1.5rem;
+    }
+
+    li {
+      margin: 0;
+      padding: 0;
+      padding-inline-start: 1rem;
+      margin-block-end: 0.5rem;
+    }
+  }
+
+  .nutrition {
+    p {
+      margin-bottom: 1.5rem;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      text-align: left;
+    }
+
+    td {
+      margin: 0;
+      padding: 0;
+      font-weight: 700;
+      color: var(--clr-brown-800);
+      border-bottom: 1px solid var(--clr-stone-150);
+      padding-block: 0.75rem;
+
+      @media (width > 375px) {
+        padding: 0;
+      }
+    }
+
+    th {
+      margin: 0;
+      padding: 0;
+      font-weight: 400;
+      border-bottom: 1px solid var(--clr-stone-150);
+
+      @media (width > 375px) {
+        padding-inline-start: 2rem;
+        width: 50%;
+      }
     }
   }
 }
