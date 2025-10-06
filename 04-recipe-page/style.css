@@ -1,0 +1,287 @@
+@layer reset {
+  /* 1. Use a more-intuitive box-sizing model */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  /* 2. Remove default margin */
+  * {
+    margin: 0;
+  }
+
+  /* 3. Enable keyword animations */
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      interpolate-size: allow-keywords;
+    }
+  }
+
+  body {
+    /* 4. Add accessible line-height */
+    line-height: 1.5;
+    /* 5. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* 6. Improve media defaults */
+  img,
+  picture,
+  video,
+  canvas,
+  svg {
+    display: block;
+    max-width: 100%;
+  }
+
+  /* 7. Inherit fonts for form controls */
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  /* 8. Avoid text overflows */
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    overflow-wrap: break-word;
+  }
+
+  /* 9. Improve line wrapping */
+  p {
+    text-wrap: pretty;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --clr-brown-800: hsl(14, 45%, 36%);
+    --clr-rose-50: hsl(330, 100%, 98%);
+    --clr-rose-800: hsl(332, 51%, 32%);
+    --clr-stone-100: hsl(30, 54%, 90%);
+    --clr-stone-150: hsl(30, 18%, 87%);
+    --clr-stone-600: hsl(30, 10%, 34%);
+    --clr-stone-900: hsl(24, 5%, 18%);
+    --clr-white: hsl(0, 0%, 100%);
+
+    --s100: 05rem;
+    --s150: 0.75rem;
+    --s200: 1rem;
+    --s300: 1.5rem;
+    --s400: 2rem;
+    --s500: 2.5rem;
+    --s600: 3.75rem;
+    --s1600: 8rem;
+
+    --ff-young-serif: "Young Serif", serif;
+    --ff-outfit: "Outfit", sans-serif;
+
+    --font-size-heading-sm: ;
+    --font-size-heading-regular: ;
+    --font-size-heading-lg: ;
+    --font-size-heading-xl: ;
+
+    --font-size-sm: ;
+    --font-size-regular: ;
+    --font-size-lg: ;
+    --font-size-xl: ;
+
+    --font-weight-normal: 400;
+    --font-weight-semi-bold: 600;
+    --font-weight-bold: 700;
+
+    --border-radius-1: 24px;
+    --border-radius-2: 12px;
+    --border-radius-3: ;
+  }
+
+  html {
+    font-family: var(--ff-outfit);
+    background-color: var(--clr-stone-150);
+    color: var(--clr-stone-600);
+  }
+
+  hr {
+    margin: 0;
+    border: 1px solid var(--clr-stone-150);
+  }
+}
+
+@layer layout {
+  .wrapper {
+    @media (width > 375px) {
+      display: grid;
+      place-content: center;
+      min-height: 100vh;
+      padding-block: 128px;
+      padding-inline: 2.5rem;
+    }
+  }
+}
+
+@layer components {
+  .card {
+    background-color: var(--clr-white);
+
+    @media (width > 375px) {
+      max-width: 736px;
+      padding: 2rem;
+      border-radius: 1.5rem;
+    }
+  }
+
+  .card__image {
+    @media (width > 375px) {
+      border-radius: 0.75rem;
+    }
+  }
+
+  .card__wrapper {
+    margin-inline: auto;
+    max-width: 311px;
+    padding-block: 2.5rem;
+    box-sizing: content-box;
+    display: grid;
+    gap: 2rem;
+
+    @media (width > 375px) {
+      margin-inline: unset;
+      max-width: unset;
+    }
+  }
+
+  .card__title {
+    color: var(--clr-stone-900);
+    font-size: 2.25rem;
+    font-family: var(--ff-young-serif);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 0;
+    margin-block-end: 2rem;
+
+    @media (width > 375px) {
+      font-size: 2.5rem;
+    }
+  }
+
+  .card__prep {
+    background-color: var(--clr-rose-50);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+
+    & span {
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    & h3 {
+      color: var(--clr-rose-800);
+      font-weight: 600;
+      font-size: 1.25rem;
+      line-height: 1;
+      margin-block-end: 1rem;
+    }
+
+    & ul {
+      margin: 0;
+      padding-inline-start: 1.4rem;
+    }
+
+    & li {
+      margin: 0;
+      padding-inline-start: 1rem;
+    }
+  }
+
+  .section {
+    & h2 {
+      font-family: var(--ff-young-serif);
+      color: var(--clr-brown-800);
+      font-size: 1.75rem;
+      font-weight: 400;
+      line-height: 1;
+      margin-block-end: 1.5rem;
+    }
+
+    & strong {
+      font-weight: 700;
+    }
+  }
+
+  .ingredients {
+    & ul {
+      margin: 0;
+      padding-inline-start: 1.5rem;
+    }
+
+    & li {
+      margin: 0;
+      padding: 0;
+      padding-inline-start: 1rem;
+      margin-block-end: 0.5rem;
+    }
+  }
+
+  .instructions {
+    & ol {
+      margin: 0;
+      padding: 0;
+      padding-inline-start: 1.5rem;
+    }
+
+    & li {
+      margin: 0;
+      padding: 0;
+      padding-inline-start: 1rem;
+      margin-block-end: 0.5rem;
+    }
+  }
+
+  .nutrition {
+    & p {
+      margin-bottom: 1.5rem;
+    }
+
+    & table {
+      border-collapse: collapse;
+      width: 100%;
+      text-align: left;
+    }
+
+    & td {
+      margin: 0;
+      padding: 0;
+      font-weight: 700;
+      color: var(--clr-brown-800);
+      border-bottom: 1px solid var(--clr-stone-150);
+      padding-block: 0.75rem;
+    }
+
+    & th {
+      margin: 0;
+      padding: 0;
+      font-weight: 400;
+      border-bottom: 1px solid var(--clr-stone-150);
+
+      @media (width > 375px) {
+        padding-inline-start: 2rem;
+        width: 50%;
+      }
+    }
+  }
+}
