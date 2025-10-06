@@ -224,12 +224,12 @@
   }
 
   .ingredients {
-    ul {
+    & ul {
       margin: 0;
       padding-inline-start: 1.5rem;
     }
 
-    li {
+    & li {
       margin: 0;
       padding: 0;
       padding-inline-start: 1rem;
@@ -238,13 +238,13 @@
   }
 
   .instructions {
-    ol {
+    & ol {
       margin: 0;
       padding: 0;
       padding-inline-start: 1.5rem;
     }
 
-    li {
+    & li {
       margin: 0;
       padding: 0;
       padding-inline-start: 1rem;
@@ -253,17 +253,17 @@
   }
 
   .nutrition {
-    p {
+    & p {
       margin-bottom: 1.5rem;
     }
 
-    table {
+    & table {
       border-collapse: collapse;
       width: 100%;
       text-align: left;
     }
 
-    td {
+    & td {
       margin: 0;
       padding: 0;
       font-weight: 700;
@@ -276,7 +276,7 @@
       }
     }
 
-    th {
+    & th {
       margin: 0;
       padding: 0;
       font-weight: 400;
@@ -288,7 +288,4 @@
       }
     }
   }
-}
-
-@layer utils {
 }
