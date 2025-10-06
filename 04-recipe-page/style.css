@@ -115,7 +115,71 @@
     background-color: var(--clr-stone-150);
     color: var(--clr-stone-600);
   }
+
+  hr {
+    margin: 0;
+    border: 1px solid var(--clr-stone-150);
+  }
 }
 
 @layer components {
+  .card {
+    background-color: var(--clr-white);
+
+    @media (width > 375px) {
+      padding: 2rem;
+      border-radius: 1.5rem;
+    }
+  }
+
+  .card__wrapper {
+    margin-inline: auto;
+    max-width: 311px;
+    padding-block: 2.5rem;
+    box-sizing: content-box;
+    display: grid;
+    gap: 2rem;
+  }
+
+  .card__title {
+    color: var(--clr-stone-900);
+    font-size: 2.25rem;
+    font-family: var(--ff-young-serif);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 0;
+    margin-block-end: 2rem;
+  }
+
+  .card__prep {
+    background-color: var(--clr-rose-50);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+
+    span {
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    h3 {
+      color: var(--clr-rose-800);
+      font-weight: 600;
+      font-size: 1.25rem;
+      line-height: 1;
+      margin-block-end: 1rem;
+    }
+
+    ul {
+      margin: 0;
+      padding-inline-start: 1.4rem;
+    }
+
+    li {
+      margin: 0;
+      padding-inline-start: 1rem;
+    }
+  }
+}
+
+@layer utils {
 }
