@@ -112,13 +112,8 @@
 
   html {
     font-family: var(--ff-outfit);
-    background-color: var(--clr-stone-150);
+    background-color: var(--clr-stone-100);
     color: var(--clr-stone-600);
-  }
-
-  hr {
-    margin: 0;
-    border: 1px solid var(--clr-stone-150);
   }
 }
 
@@ -132,6 +127,10 @@
       padding-inline: 2.5rem;
     }
   }
+
+  .hr {
+    border: 1px solid var(--clr-stone-150);
+  }
 }
 
 @layer components {
@@ -140,7 +139,7 @@
 
     @media (width > 375px) {
       max-width: 736px;
-      padding: 2rem;
+      padding: 2.5rem;
       border-radius: 1.5rem;
     }
   }
@@ -165,7 +164,7 @@
     }
   }
 
-  .card__title {
+  .header__title {
     color: var(--clr-stone-900);
     font-size: 2.25rem;
     font-family: var(--ff-young-serif);
@@ -179,109 +178,96 @@
     }
   }
 
-  .card__prep {
+  .prep {
     background-color: var(--clr-rose-50);
     border-radius: 0.75rem;
     padding: 1.5rem;
+  }
 
-    & span {
+  .prep__title {
+    color: var(--clr-rose-800);
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1;
+    margin-block-end: 1rem;
+  }
+
+  .prep__item {
+    margin: 0;
+    padding-inline-start: 1rem;
+    span {
       font-size: 1rem;
       font-weight: 700;
     }
-
-    & h3 {
-      color: var(--clr-rose-800);
-      font-weight: 600;
-      font-size: 1.25rem;
-      line-height: 1;
-      margin-block-end: 1rem;
-    }
-
-    & ul {
-      margin: 0;
-      padding-inline-start: 1.4rem;
-    }
-
-    & li {
-      margin: 0;
-      padding-inline-start: 1rem;
-    }
   }
 
-  .section {
-    & h2 {
-      font-family: var(--ff-young-serif);
-      color: var(--clr-brown-800);
-      font-size: 1.75rem;
-      font-weight: 400;
-      line-height: 1;
-      margin-block-end: 1.5rem;
-    }
-
-    & strong {
-      font-weight: 700;
-    }
+  .prep__list {
+    margin: 0;
+    padding-inline-start: 1.4rem;
   }
 
-  .ingredients {
-    & ul {
-      margin: 0;
-      padding-inline-start: 1.5rem;
-    }
-
-    & li {
-      margin: 0;
-      padding: 0;
-      padding-inline-start: 1rem;
-      margin-block-end: 0.5rem;
-    }
+  .section__title {
+    font-family: var(--ff-young-serif);
+    color: var(--clr-brown-800);
+    font-size: 1.75rem;
+    font-weight: 400;
+    line-height: 1;
+    margin-block-end: 1.5rem;
   }
 
-  .instructions {
-    & ol {
-      margin: 0;
-      padding: 0;
-      padding-inline-start: 1.5rem;
-    }
-
-    & li {
-      margin: 0;
-      padding: 0;
-      padding-inline-start: 1rem;
-      margin-block-end: 0.5rem;
-    }
+  .ingredients__list {
+    margin: 0;
+    padding-inline-start: 1.5rem;
   }
 
-  .nutrition {
-    & p {
-      margin-bottom: 1.5rem;
-    }
+  .ingredients__item {
+    margin: 0;
+    padding: 0;
+    padding-inline-start: 1rem;
+    margin-block-end: 0.5rem;
+  }
 
-    & table {
-      border-collapse: collapse;
-      width: 100%;
-      text-align: left;
-    }
+  .instructions__list {
+    margin: 0;
+    padding: 0;
+    padding-inline-start: 1.5rem;
+  }
 
-    & td {
-      margin: 0;
-      padding: 0;
-      font-weight: 700;
-      color: var(--clr-brown-800);
-      border-bottom: 1px solid var(--clr-stone-150);
-      padding-block: 0.75rem;
-    }
+  .instructions__item {
+    margin: 0;
+    padding: 0;
+    padding-inline-start: 1rem;
+    margin-block-end: 0.5rem;
+  }
 
-    & th {
-      margin: 0;
-      padding: 0;
-      font-weight: 400;
-      border-bottom: 1px solid var(--clr-stone-150);
+  .nutrition__text {
+    margin-bottom: 1.5rem;
+  }
 
-      @media (width > 375px) {
-        padding-inline-start: 2rem;
-        width: 50%;
-      }
+  .nutrition__table {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: left;
+  }
+
+  .nutrition__row-data {
+    margin: 0;
+    padding: 0;
+    font-weight: 700;
+    color: var(--clr-brown-800);
+    border-bottom: 1px solid var(--clr-stone-150);
+    padding-block: 0.75rem;
+  }
+
+  .nutrition__row-header {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    border-bottom: 1px solid var(--clr-stone-150);
+
+    @media (width > 375px) {
+      padding-inline-start: 2rem;
+      width: 50%;
     }
   }
 }
