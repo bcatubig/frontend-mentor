@@ -95,6 +95,10 @@
   p {
     line-height: 1.6;
   }
+
+  img {
+    max-inline-size: 100%;
+  }
 }
 
 @layer layout {
@@ -110,10 +114,11 @@
   .card {
     background-color: var(--clr-white);
     border-radius: 0.5rem;
-    max-width: 600px;
 
     @media (width > 375px) {
-      display: flex;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      max-width: 600px;
     }
   }
 
@@ -172,12 +177,11 @@
   }
 
   .card__img {
-    width: 100%;
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
 
     @media (width > 375px) {
-      max-width: 300px;
+      min-height: 100%;
       object-fit: cover;
       border-radius: unset;
       border-top-left-radius: 0.5rem;
@@ -189,10 +193,6 @@
     padding: 2rem;
     display: grid;
     gap: 1.5rem;
-
-    @media (width > 375px) {
-      max-width: 300px;
-    }
   }
 
   .card__title {
