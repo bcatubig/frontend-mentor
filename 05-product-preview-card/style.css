@@ -177,4 +177,25 @@
     letter-spacing: 0;
     color: var(--clr-black);
   }
+
+  .price__wrapper {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .price__retail {
+    font-family: var(--ff-montserrat);
+    font-size: 0.813rem;
+    line-height: 1.2;
+    font-weight: 500;
+    text-decoration: line-through;
+  }
+
+  .price__sale {
+    font-family: var(--ff-fraunces);
+    font-size: 2rem;
+    line-height: 1;
+    font-weight: 700;
+  }
 }
