@@ -115,7 +115,7 @@
     background-color: var(--clr-white);
     border-radius: 0.5rem;
 
-    @media (width > 375px) {
+    @media (width > 500px) {
       display: grid;
       grid-template-columns: 1fr 1fr;
       max-width: 600px;
@@ -180,7 +180,7 @@
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
 
-    @media (width > 375px) {
+    @media (width > 500px) {
       min-height: 100%;
       object-fit: cover;
       border-radius: unset;
