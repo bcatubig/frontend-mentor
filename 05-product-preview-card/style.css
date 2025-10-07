@@ -177,7 +177,7 @@
     border-top-right-radius: 0.5rem;
 
     @media (width > 375px) {
-      width: 300px;
+      max-width: 300px;
       object-fit: cover;
       border-radius: unset;
       border-top-left-radius: 0.5rem;
@@ -191,7 +191,7 @@
     gap: 1.5rem;
 
     @media (width > 375px) {
-      width: 300px;
+      max-width: 300px;
     }
   }
 
