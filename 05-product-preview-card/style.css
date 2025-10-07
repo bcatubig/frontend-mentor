@@ -111,6 +111,10 @@
     background-color: var(--clr-white);
     border-radius: 0.5rem;
     max-width: 600px;
+
+    @media (width > 375px) {
+      display: flex;
+    }
   }
 
   .button {
@@ -129,6 +133,16 @@
     font-size: 0.875rem;
     font-weight: 700;
     line-height: 1.5;
+    outline: none;
+  }
+
+  .button:hover {
+    background-color: var(--clr-green-700);
+  }
+
+  .button:focus {
+    background-color: var(--clr-green-700);
+    box-shadow: 0 0 0 2px var(--clr-green-500);
   }
 
   .button__image {
@@ -161,12 +175,24 @@
     width: 100%;
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
+
+    @media (width > 375px) {
+      width: 300px;
+      object-fit: cover;
+      border-radius: unset;
+      border-top-left-radius: 0.5rem;
+      border-bottom-left-radius: 0.5rem;
+    }
   }
 
   .card__wrapper {
     padding: 2rem;
     display: grid;
     gap: 1.5rem;
+
+    @media (width > 375px) {
+      width: 300px;
+    }
   }
 
   .card__title {
