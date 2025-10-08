@@ -108,12 +108,14 @@
 
   .cards {
     display: grid;
-    gap: 2rem;
+
     border: 1px solid green;
+    align-items: center;
+    justify-content: center;
 
     @media (width > 375px) {
       /* background: green; */
-      /* grid-template-columns: repeat(2, minmax(350px, 1fr)); */
+      grid-template-columns: repeat(2, minmax(350px, 1fr));
     }
 
     @media (width > 768px) {
@@ -121,10 +123,23 @@
     }
   }
 
+  .subgrid {
+    display: grid;
+    grid-template-columns: subgrid;
+  }
+
   .card {
     border: 1px solid;
-    /* width: 350px; */
-    /* height: 250px; */
+    height: 250px;
+
+    @media (width > 375px) {
+      width: 314px;
+    }
+
+    @media (width > 768) {
+      width: 350px;
+    }
+
     display: grid;
     padding: 2rem;
   }
