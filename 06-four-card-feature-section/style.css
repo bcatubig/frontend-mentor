@@ -83,7 +83,7 @@
 
   html {
     font-family: var(--ff-poppins);
-    background-color: var(--clr-white);
+    background-color: #fafafa;
     color: var(--clr-grey-500);
   }
 }
@@ -171,7 +171,7 @@
     padding: 2rem;
     border-radius: 0.5rem;
     box-shadow: 0px 15px 30px -11px hsla(212, 6%, 44%, 50%);
-
+    background-color: var(--clr-white);
     @media (width > 750px) {
       width: 314px;
       height: 250px;
