@@ -20,91 +20,65 @@
   </head>
   <body>
     <div class="l-wrapper">
-      <div class="main__wrapper">
-        <header class="header">
-          <h1 class="header__title">
-            Reliable, efficient delivery
-            <span class="header__em">Powered by Technology</span>
-          </h1>
-          <p class="header__text">
-            Our Artificial Intelligence powered tools use millions of project
-            data points to ensure that your project is successful
-          </p>
-        </header>
-        <main class="main">
-          <div class="cards">
-            <div class="card card-supervisor">
-              <header class="card__header">
-                <h2 class="card__header__title">Supervisor</h2>
-                <p class="card__header__text">
-                  Monitors activity to identify project roadblocks
-                </p>
-              </header>
-
-              <div class="card__image-wrapper">
-                <img
-                  class="card__img"
-                  src="images/icon-supervisor.svg"
-                  alt="Magnifing glass"
-                />
-              </div>
-            </div>
-
-            <div class="subgrid">
-              <div class="card card-team-builder">
-                <header class="card__header">
-                  <h2 class="card__header__title">Team Builder</h2>
-                  <p class="card__header__text">
-                    Scans our talent network to create the optimal team for your
-                    project
-                  </p>
-                </header>
-
-                <div class="card__image-wrapper">
-                  <img
-                    class="card__img"
-                    src="images/icon-team-builder.svg"
-                    alt="House infront of a web page"
-                  />
-                </div>
-              </div>
-              <div class="card card-karma">
-                <header class="card__header">
-                  <h2 class="card__header__title">Karma</h2>
-                  <p class="card__header__text">
-                    Regularly evaluates our talent to ensure quality
-                  </p>
-                </header>
-                <div class="card__image-wrapper">
-                  <img
-                    class="card__img"
-                    src="images/icon-karma.svg"
-                    alt="Image of a lightbulb"
-                  />
-                </div>
-              </div>
-            </div>
-
-            <div class="card card-calculator">
-              <header class="card__header">
-                <h2 class="card__header__title">Calculator</h2>
-                <p class="card__header__text">
-                  Uses data from past projects to provide better delivery
-                  estimates
-                </p>
-              </header>
-
-              <div class="card__image-wrapper">
-                <img
-                  class="card__img"
-                  src="images/icon-calculator.svg"
-                  alt="Image of a computer monitor"
-                />
-              </div>
-            </div>
-          </div>
-        </main>
-      </div>
+      <header class="main-header">
+        <h1 class="main-header__title">
+          Reliable, efficient delivery
+          <span class="main-header__title--bold">Powered by Technology</span>
+        </h1>
+        <p class="main-header__text">
+          Our Artificial Intelligence powered tools use millions of project data
+          points to ensure that your project is successful
+        </p>
+      </header>
+      <main class="main">
+        <section class="cards">
+          <article class="card" style="grid-area: supervisor">
+            <h2 class="card__title">Supervisor</h2>
+            <p class="card__text">
+              Monitors activity to identify project roadblocks
+            </p>
+            <img
+              class="card__img"
+              src="images/icon-supervisor.svg"
+              alt="A magnifying glass"
+            />
+          </article>
+          <article class="card" style="grid-area: team">
+            <h2 class="card__title">Team Builder</h2>
+            <p class="card__text">
+              Scans our talent network to create the optimal team for your
+              project
+            </p>
+            <img
+              class="card__img"
+              src="images/icon-team-builder.svg"
+              alt="An image of a web browser and house"
+            />
+          </article>
+          <article class="card" style="grid-area: karma">
+            <h2 class="card__title">Karma</h2>
+            <p class="card__text">
+              Regularly evaluates our talent to ensure quality
+            </p>
+            <img
+              class="card__img"
+              src="images/icon-karma.svg"
+              alt="An image of a lightbulb"
+            />
+          </article>
+          <article class="card" style="grid-area: calculator">
+            <h2 class="card__title">Calculator</h2>
+            <p class="card__text">
+              Uses data from past projects to provide better delivery estimates
+            </p>
+            <img
+              class="card__img"
+              src="images/icon-calculator.svg"
+              alt="An image of a calculator"
+            />
+          </article>
+        </section>
+      </main>
     </div>
   </body>
 </html>
