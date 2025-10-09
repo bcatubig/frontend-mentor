@@ -91,7 +91,7 @@
 @layer layout {
   .l-wrapper {
     margin-inline: auto;
-    max-width: 960px;
+    max-width: 1400px;
     padding-inline: 2rem;
   }
 }
@@ -143,13 +143,22 @@
     margin-inline: auto;
     margin-block-end: 2rem;
 
-    @media (width > 700px) {
-      max-inline-size: 660px;
+    @media (width > 750px) {
+      max-width: 660px;
       align-items: center;
       justify-items: center;
-      justify-content: center;
       grid-template-columns: repeat(auto-fit, minmax(314px, 1fr));
       grid-template-areas: ". team team ." ". supervisor karma ." ". calculator calculator .";
+    }
+
+    @media (width > 1200px) {
+      max-width: 1114px;
+      grid-template-columns: repeat(3, minmax(350px, 1fr));
+      grid-template-areas:
+        ". team ."
+        "supervisor team calculator"
+        "supervisor karma calculator"
+        ". karma .";
     }
   }
 
@@ -158,9 +167,13 @@
     border-radius: 0.5rem;
     box-shadow: 0px 15px 30px -11px hsla(212, 6%, 44%, 50%);
 
-    @media (width > 700px) {
+    @media (width > 750px) {
       width: 314px;
       height: 250px;
+    }
+
+    @media (width > 1200px) {
+      width: 350px;
     }
   }
 
