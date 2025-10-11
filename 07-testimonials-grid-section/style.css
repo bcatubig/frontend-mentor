@@ -1,0 +1,259 @@
+@layer reset {
+  /* 1. Use a more-intuitive box-sizing model */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  /* 2. Remove default margin */
+  * {
+    margin: 0;
+  }
+
+  /* 3. Enable keyword animations */
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      interpolate-size: allow-keywords;
+    }
+  }
+
+  body {
+    /* 4. Add accessible line-height */
+    line-height: 1.5;
+    /* 5. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* 6. Improve media defaults */
+  img,
+  picture,
+  video,
+  canvas,
+  svg {
+    display: block;
+    max-width: 100%;
+  }
+
+  /* 7. Inherit fonts for form controls */
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  /* 8. Avoid text overflows */
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    overflow-wrap: break-word;
+  }
+
+  /* 9. Improve line wrapping */
+  p {
+    text-wrap: pretty;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --clr-black: hsl(0, 0%, 7%);
+    --clr-dark-blue: hsl(219, 29%, 14%);
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-grey-100: hsl(214, 17%, 92%);
+    --clr-grey-200: hsl(0, 0%, 81%);
+    --clr-grey-300: hsl(215, 10%, 67%);
+    --clr-grey-400: hsl(224, 10%, 45%);
+    --clr-grey-500: hsl(217, 19%, 35%);
+    --clr-purple-50: hsl(260, 100%, 95%);
+    --clr-purple-300: hsl(264, 82%, 70%);
+    --clr-purple-500: hsl(263, 55%, 52%);
+
+    --ff-barlow-condensed: "Barlow Semi Condensed", sans-serif;
+  }
+
+  html {
+    font-family: var(--ff-barlow-condensed);
+    background-color: hsl(300, 5%, 96%);
+    color: var(--clr-grey-400);
+  }
+}
+
+@layer layout {
+  .l-wrapper {
+    display: grid;
+    min-height: 100vh;
+    place-content: center;
+  }
+}
+
+@layer components {
+  .cards {
+    display: grid;
+    gap: 2rem;
+    margin-inline: auto;
+    padding-inline: 2rem;
+    margin-block-start: var(--cards-margin-top, 2rem);
+    max-inline-size: 1114px;
+    grid-template-areas: "one" "two" "three" "four" "five";
+
+    @media (width >= 768px) {
+      grid-template-areas:
+        "one one one one "
+        "two two three three"
+        "four four four four"
+        "five five five five";
+    }
+
+    /* Grid: 8 cols */
+    @media (width >= 1024px) {
+      grid-template-areas:
+        "one one one two five"
+        "three four four four five";
+    }
+  }
+
+  .card {
+    padding: 2rem;
+    gap: 1rem;
+    border-radius: 8px;
+    color: var(--card-foreground);
+
+    align-items: var(--card-vertical-alignment, start);
+    justify-items: var(--card-horizontal-alignment, start);
+    justify-content: var(--card-horizontal-alignment, start);
+
+    background-color: var(--card-background, --clr-white);
+    /* filter: drop-shadow(40px 60px 50 -47 "#48556A" 24%); */
+
+    filter: drop-shadow(40px 40px 50px hsla(217, 19%, 35%, 25%));
+  }
+
+  .card__avatar {
+    max-inline-size: 28px;
+    border-radius: 100%;
+    border: var(--card-avatar-border, inherit);
+  }
+
+  .card__header {
+    display: flex;
+    gap: 1rem;
+    margin-block-end: 1rem;
+  }
+
+  .card__name {
+    font-size: 0.813rem;
+    line-height: 1.1;
+    color: var(--card-name-color, inherit);
+  }
+
+  .card__subtitle {
+    font-size: 0.688rem;
+    line-height: 1.1;
+    color: var(--card-subtitle-color, inherit);
+  }
+
+  .card__highlight {
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--card-highlight-color, inherit);
+    margin-block-end: 1rem;
+  }
+
+  .card__quote {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.4;
+    color: var(--card-quote-color, inherit);
+  }
+}
+
+@layer utils {
+  .one {
+    --card-background: var(--clr-purple-500);
+    --card-foreground: var(--clr-purple-50);
+
+    --card-subtitle-color: var(--clr-purple-50);
+    --card-avatar-border: 2px solid hsl(264, 81%, 70%);
+    --card-name-color: var(--clr-white);
+    --card-subtitle-color: var(--clr-purple-50);
+    --card-hilight-color: var(--clr-white);
+    --card-quote-color: var(--clr-purple-50);
+
+    grid-area: one;
+    gap: unset;
+
+    @media (width >= 768px) {
+      background-image: url(images/bg-pattern-quotation.svg);
+      background-repeat: no-repeat;
+      background-position: top right 50px;
+    }
+  }
+
+  .two {
+    --card-background: var(--clr-grey-500);
+    --card-foreground: var(--clr-grey-100);
+
+    --card-subtitle-color: var(--clr-purple-50);
+    --card-avatar-border: unset;
+    --card-name-color: var(--clr-white);
+    --card-subtitle-color: var(--clr-grey-300);
+    --card-hilight-color: var(--clr-white);
+    --card-quote-color: var(--clr-purple-50);
+
+    grid-area: two;
+  }
+
+  .three {
+    --card-background: var(--clr-white);
+    --card-foreground: var(--clr-grey-400);
+
+    --card-avatar-border: unset;
+    --card-name-color: var(--clr-grey-500);
+    --card-subtitle-color: var(--clr-grey-400);
+    --card-hilight-color: var(--clr-grey-500);
+    --card-quote-color: var(--clr-grey-400);
+
+    grid-area: three;
+  }
+
+  .four {
+    --card-background: var(--clr-dark-blue);
+    --card-foreground: var(--clr-grey-100);
+
+    --card-avatar-border: 2px solid var(--clr-purple-500);
+    --card-name-color: var(--clr-white);
+    --card-subtitle-color: var(--clr-white);
+    --card-hilight-color: var(--clr-grey-200);
+    --card-quote-color: var(--clr-grey-100);
+
+    grid-area: four;
+  }
+
+  .five {
+    --card-background: var(--clr-white);
+    --card-foreground: var(--clr-grey-400);
+
+    --card-avatar-border: unset;
+    --card-name-color: var(--clr-grey-500);
+    --card-subtitle-color: var(--clr-grey-400);
+    --card-hilight-color: var(--clr-grey-500);
+    --card-quote-color: var(--clr-grey-400);
+
+    grid-area: five;
+  }
+}
