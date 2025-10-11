@@ -96,22 +96,39 @@
 }
 
 @layer layout {
+  .l-wrapper {
+    max-width: 1400px;
+    margin-inline: auto;
+    padding-inline: 1rem;
+  }
 }
 
 @layer components {
   .main-header {
     padding-inline: 5rem;
     padding-block-start: 3rem;
-    display: grid;
+    display: flex;
     justify-content: center;
+    min-width: 119px;
   }
 
   .hero {
-    padding-block-start: 64px;
+    /* display: grid; */
+    gap: 2rem;
+    /* border: 1px solid aqua; */
   }
 
-  .hero__img {
-    overflow: hidden;
+  .hero > * {
+    position: relative;
+  }
+
+  .hero > img {
+    padding-top: 64px;
+  }
+
+  .hero__body {
+    /* border: 1px solid blue; */
+    padding: 2rem;
   }
 
   .hero__title {
@@ -131,10 +148,21 @@
     text-align: center;
   }
 
+  .hero__img-right {
+    display: none;
+    grid-area: right;
+    /* position: relative; */
+    /* right: -10%; */
+    width: 100px;
+    height: 100px;
+    border: 1px solid blue;
+  }
+
   .hero__body {
     display: grid;
     gap: 24px;
     padding-inline: 2rem;
+    grid-area: body;
   }
 
   .button {
