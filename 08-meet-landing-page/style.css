@@ -251,12 +251,12 @@
   .person-3 {
     position: absolute;
     left: 0;
-    bottom: 2rem;
+    top: 4.5rem;
   }
 
   .person-4 {
     position: absolute;
-    top: 2rem;
+    top: 1.5rem;
     left: 40%;
   }
 
@@ -275,6 +275,6 @@
   .person-2 {
     position: absolute;
     left: 80%;
-    bottom: 1rem;
+    top: 4.5rem;
   }
 }
