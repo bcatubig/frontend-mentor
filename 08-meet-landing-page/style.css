@@ -110,20 +110,26 @@
     display: flex;
     justify-content: center;
     min-width: 119px;
+
+    margin-block-end: 4rem;
   }
 
   .hero {
-    /* display: grid; */
+    display: grid;
     gap: 2rem;
-    /* border: 1px solid aqua; */
+    justify-items: center;
+    /* border: 1px solid blue; */
   }
 
   .hero > * {
-    position: relative;
+    /* border: 1px solid; */
   }
 
   .hero > img {
-    padding-top: 64px;
+    /* position: fixed; */
+    transform: scale(1.2);
+
+    width: 100%;
   }
 
   .hero__body {
@@ -148,21 +154,10 @@
     text-align: center;
   }
 
-  .hero__img-right {
-    display: none;
-    grid-area: right;
-    /* position: relative; */
-    /* right: -10%; */
-    width: 100px;
-    height: 100px;
-    border: 1px solid blue;
-  }
-
   .hero__body {
     display: grid;
     gap: 24px;
     padding-inline: 2rem;
-    grid-area: body;
   }
 
   .button {
