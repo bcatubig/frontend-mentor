@@ -117,19 +117,12 @@
   .hero {
     display: grid;
     gap: 2rem;
-    justify-items: center;
+  }
+
+  .hero__img {
+    display: inline-block;
     /* border: 1px solid blue; */
-  }
-
-  .hero > * {
-    /* border: 1px solid; */
-  }
-
-  .hero > img {
-    /* position: fixed; */
-    transform: scale(1.2);
-
-    width: 100%;
+    /* max-inline-size: 60px; */
   }
 
   .hero__body {
