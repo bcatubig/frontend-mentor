@@ -116,18 +116,36 @@
 
   .hero {
     display: grid;
-    gap: 2rem;
+    /* gap: 2rem; */
+    grid-template-areas: "hero-left hero-right" "hero-body hero-body";
+    justify-content: start;
   }
 
   .hero__img {
-    display: inline-block;
+    width: 60px;
+    height: 60px;
+  }
+
+  .hero__left {
+    grid-area: hero-left;
+    position: relative;
+    /* border: 1px solid red; */
+    margin-inline-end: 17px;
+    min-height: 10rem;
+    min-inline-size: 11.719rem;
+  }
+
+  .hero__right {
+    grid-area: hero-right;
+    position: relative;
     /* border: 1px solid blue; */
-    /* max-inline-size: 60px; */
+    min-height: 10rem;
+    min-inline-size: 11.719rem;
   }
 
   .hero__body {
-    /* border: 1px solid blue; */
     padding: 2rem;
+    grid-area: hero-body;
   }
 
   .hero__title {
@@ -170,5 +188,93 @@
     gap: 1rem;
     align-items: center;
     justify-items: center;
+  }
+
+  .button--cyan {
+    background-color: var(--clr-cyan-600);
+  }
+
+  .button--purple {
+    background-color: var(--clr-purple-600);
+  }
+
+  .button--version {
+    color: var(--clr-cyan-300);
+  }
+}
+
+@layer hero-left {
+  .person-9 {
+    position: absolute;
+    bottom: 0;
+    right: 80%;
+  }
+
+  .person-12 {
+    position: absolute;
+    bottom: 4.5rem;
+    right: 80%;
+  }
+
+  .person-10 {
+    position: absolute;
+    top: 0;
+    right: 40%;
+  }
+
+  .person-7 {
+    position: absolute;
+    top: 4.5rem;
+    right: 40%;
+  }
+
+  .person-11 {
+    position: absolute;
+    top: 1.5rem;
+    right: 1%;
+  }
+
+  .person-8 {
+    position: absolute;
+    bottom: 0;
+    right: 1%;
+  }
+}
+
+@layer hero-right {
+  .person-6 {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .person-3 {
+    position: absolute;
+    left: 0;
+    bottom: 2rem;
+  }
+
+  .person-4 {
+    position: absolute;
+    top: 2rem;
+    left: 40%;
+  }
+
+  .person-1 {
+    position: absolute;
+    left: 40%;
+    bottom: 0;
+  }
+
+  .person-5 {
+    position: absolute;
+    left: 80%;
+    top: 0;
+  }
+
+  .person-2 {
+    position: absolute;
+    left: 80%;
+    bottom: 1rem;
   }
 }
