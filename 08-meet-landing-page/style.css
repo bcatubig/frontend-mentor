@@ -80,7 +80,7 @@
     --clr-cyan-600: hsl(192, 37%, 48%);
     --clr-purple-300: hsl(268, 100%, 86%);
     --clr-purple-600: hsl(268, 34%, 53%);
-    --clr-slate-300: hsl(240, 18%, 55%);
+    --clr-slate-300: hsl(240, 18%, 85%);
     --clr-slate-600: hsl(240, 10%, 57%);
     --clr-slate-900: hsl(240, 21%, 20%);
     --clr-white: hsl(0, 0%, 98%);
@@ -200,6 +200,54 @@
 
   .button--version {
     color: var(--clr-cyan-300);
+  }
+
+  .section {
+    display: grid;
+    position: relative;
+
+    padding-inline: 2rem;
+    justify-items: center;
+  }
+
+  .section__number::before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 1px;
+    height: 80px;
+    background-color: var(--clr-slate-300);
+    text-align: center;
+    top: -80px;
+    left: 50%;
+  }
+
+  .section__number {
+    position: relative;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 800;
+    line-height: 1.5;
+    background-color: var(--clr-white);
+    color: var(--clr-slate-600);
+    padding: 1rem;
+    border: 1px solid var(--clr-cyan-300);
+    border-radius: 100%;
+    width: 56px;
+    height: 56px;
+    top: -50%;
+  }
+
+  .about {
+    margin-top: 8rem;
+    border: 1px solid blue;
+  }
+
+  .footer {
+    border: 1px solid yellow;
+    margin-top: 8rem;
+    background-color: var(--clr-cyan-600);
+    color: var(--clr-white);
   }
 }
 
