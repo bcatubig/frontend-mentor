@@ -286,6 +286,10 @@ Content Wrapper Widths:
     background-color: var(--clr-cyan-600);
     color: var(--clr-white);
   }
+
+  .about__imgs {
+    margin-block-end: 4rem;
+  }
 }
 
 @layer hero-left {
