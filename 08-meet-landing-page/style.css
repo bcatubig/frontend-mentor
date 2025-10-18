@@ -131,7 +131,6 @@ Content Wrapper Widths:
     --span-color: var(--clr-cyan-300);
     --hover-background: hsl(192, 54%, 64%);
     --hover-foreground: var(--clr-white);
-    --hover-span: red;
 
     background-color: var(--background);
     color: var(--foreground);
@@ -173,17 +172,22 @@ Content Wrapper Widths:
 
   .hero {
     display: grid;
+    gap: 1rem;
     justify-content: center;
     margin-block-start: 3rem;
-    padding-inline: 2rem;
+    grid-template-areas: "hero-left hero-right" "hero-wrapper hero-wrapper";
   }
 
   .hero__left {
-    display: none;
+    grid-area: hero-left;
+    position: relative;
+    height: 160px;
   }
 
   .hero__right {
-    display: none;
+    grid-area: hero-right;
+    position: relative;
+    height: 160px;
   }
 
   .hero__text {
@@ -201,9 +205,12 @@ Content Wrapper Widths:
   }
 
   .hero__wrapper {
+    grid-area: hero-wrapper;
     display: grid;
     gap: 1.5rem;
     text-align: center;
+    padding-inline: 2rem;
+    margin-block-start: 2rem;
   }
 
   .nav {
@@ -229,6 +236,7 @@ Content Wrapper Widths:
 
     width: var(--width);
     height: var(--height);
+    overflow: clip;
   }
 
   .person--9 {
@@ -237,7 +245,7 @@ Content Wrapper Widths:
   }
 
   .person--12 {
-    --bottom: 4.5rem;
+    --bottom: 45%;
     --right: 80%;
   }
 
@@ -247,18 +255,18 @@ Content Wrapper Widths:
   }
 
   .person--7 {
-    --top: 4.5rem;
     --right: 40%;
+    --bottom: 20%;
   }
 
   .person--11 {
     --top: 1.5rem;
-    --right: 1%;
+    --right: 0%;
   }
 
   .person--8 {
     --bottom: 0;
-    --right: 1%;
+    --right: 0%;
   }
 
   .person--6 {
@@ -266,28 +274,28 @@ Content Wrapper Widths:
     --left: 0;
   }
 
-  .person-3 {
+  .person--3 {
     --left: 0;
-    --top: 4.5rem;
+    --bottom: 20%;
   }
 
-  .person-4 {
-    --top: 1.5rem;
+  .person--4 {
+    --top: 20%;
     --left: 40%;
   }
 
-  .person-1 {
+  .person--1 {
     --left: 40%;
     --bottom: 0;
   }
 
-  .person-5 {
+  .person--5 {
     --left: 80%;
     --top: 0;
   }
 
-  .person-2 {
+  .person--2 {
     --left: 80%;
-    --top: 4.5rem;
+    --bottom: 15%;
   }
 }
