@@ -218,6 +218,11 @@ Content Wrapper Widths:
     justify-items: center;
     align-items: center;
     padding-block-start: 3rem;
+
+    a:hover,
+    a:focus {
+      outline: transparent;
+    }
   }
 
   .person {
