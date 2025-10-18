@@ -171,12 +171,19 @@ Content Wrapper Widths:
   }
 
   .hero {
+    --background: white;
+
+    background-color: var(--background);
     display: grid;
     gap: 1rem;
     justify-content: center;
     margin-block-start: 3rem;
     padding-block-end: 2rem;
     grid-template-areas: "hero-left hero-right" "hero-wrapper hero-wrapper";
+
+    /* @media (width > 375px) {
+      --background: red;
+    } */
   }
 
   .hero__left {
@@ -287,21 +294,21 @@ Content Wrapper Widths:
 
   .person--4 {
     --top: 20%;
-    --left: 40%;
+    --left: 45%;
   }
 
   .person--1 {
-    --left: 40%;
+    --left: 45%;
     --bottom: 0;
   }
 
   .person--5 {
-    --left: 80%;
+    --left: 90%;
     --top: 0;
   }
 
   .person--2 {
-    --left: 80%;
+    --left: 90%;
     --bottom: 15%;
   }
 
@@ -309,7 +316,6 @@ Content Wrapper Widths:
     display: grid;
     align-items: center;
     justify-items: center;
-    border: 1px solid blue;
     padding-inline: 2rem;
   }
 
