@@ -175,6 +175,7 @@ Content Wrapper Widths:
     gap: 1rem;
     justify-content: center;
     margin-block-start: 3rem;
+    padding-block-end: 2rem;
     grid-template-areas: "hero-left hero-right" "hero-wrapper hero-wrapper";
   }
 
@@ -302,5 +303,21 @@ Content Wrapper Widths:
   .person--2 {
     --left: 80%;
     --bottom: 15%;
+  }
+
+  .section {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    border: 1px solid blue;
+    padding-inline: 2rem;
+  }
+
+  .section__imgs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    align-items: center;
+    justify-items: center;
   }
 }
