@@ -116,278 +116,178 @@ Content Wrapper Widths:
 */
 
 @layer layout {
-  .l-wrapper {
-    max-width: 28rem;
-    margin-inline: auto;
-    padding-inline: 2rem;
-    box-sizing: content-box;
-    border: 1px solid blue;
-
-    @media (width >= 22rem) {
-      max-width: 42.5rem;
-    }
-
-    @media (width >=48rem) {
-      max-width: 70rem;
-    }
-  }
 }
 
 @layer components {
-  .main-header {
-    padding-inline: 5rem;
-    padding-block-start: 3rem;
-    display: flex;
-    justify-content: center;
-    min-width: 119px;
+  .button {
+    --background: var(--clr-slate-600);
+    --foreground: var(--clr-white);
+    --padding-x: 2.5rem;
+    --padding-y: 1rem;
+    --radius: 1.813rem;
+    --font-size: 1rem;
+    --font-weight: 900;
+    --line-height: 1.5;
+    --span-color: var(--clr-cyan-300);
+    --hover-background: hsl(192, 54%, 64%);
+    --hover-foreground: var(--clr-white);
+    --hover-span: red;
 
-    margin-block-end: 4rem;
+    background-color: var(--background);
+    color: var(--foreground);
+    padding-inline: var(--padding-x);
+    padding-block: var(--padding-y);
+    border-radius: var(--radius);
+    font-size: var(--font-size);
+    font-weight: var(--font-weight);
+    outline: transparent;
+
+    span {
+      color: var(--span-color);
+    }
+
+    &:focus,
+    &:hover {
+      background-color: var(--hover-background);
+      color: var(--hover-foreground);
+    }
   }
 
-  .about__imgs {
+  .button--purple {
+    --background: var(--clr-purple-600);
+    --span-color: var(--clr-purple-300);
+    --hover-background: hsl(268, 55%, 71%);
+  }
+
+  .button--cyan {
+    --background: var(--clr-cyan-600);
+    --span-color: var(--clr-cyan-300);
+  }
+
+  .button__wrapper {
     display: grid;
-    grid-template-columns: repeat(2, 147.5px);
     gap: 1rem;
     align-items: center;
-    justify-content: center;
+    justify-items: center;
   }
 
   .hero {
     display: grid;
-    /* gap: 2rem; */
-    grid-template-areas: "hero-left hero-right" "hero-body hero-body";
-    justify-content: start;
     justify-content: center;
-  }
-
-  .hero__img {
-    width: 60px;
-    height: 60px;
+    margin-block-start: 3rem;
+    padding-inline: 2rem;
   }
 
   .hero__left {
-    grid-area: hero-left;
-    position: relative;
-    margin-inline-end: 17px;
-    min-height: 10rem;
-    min-inline-size: 11.719rem;
+    display: none;
   }
 
   .hero__right {
-    grid-area: hero-right;
-    position: relative;
-    min-height: 10rem;
-    min-inline-size: 11.719rem;
-  }
-
-  .hero__body {
-    grid-area: hero-body;
-  }
-
-  .hero__title {
-    font-size: 40px;
-    line-height: 1.1;
-    font-weight: 900;
-    color: var(--clr-slate-900);
-    text-align: center;
-    margin-block-start: 3rem;
+    display: none;
   }
 
   .hero__text {
-    color: var(--clr-slate-600);
-    font-size: 1rem;
-    line-height: 1.5;
-    font-weight: 500;
-    text-align: center;
-  }
-
-  .hero__body {
-    display: grid;
-    gap: 24px;
-    padding-inline: 2rem;
-  }
-
-  .button {
-    border-radius: 29px;
-    color: var(--button-fg, var(--clr-white));
-    background-color: var(--button-bg, var(--clr-cyan-600));
-    font-size: var(--button-font-size, 1rem);
-    font-weight: 900;
-    line-height: 1.5;
-    padding-block: 1rem;
-    padding-inline: 2.5rem;
-    width: fit-content;
-  }
-
-  .button__body {
-    display: grid;
-    gap: 1rem;
-    align-items: center;
-    justify-items: center;
-  }
-
-  .button--cyan {
-    background-color: var(--clr-cyan-600);
-  }
-
-  .button--purple {
-    background-color: var(--clr-purple-600);
-  }
-
-  .button--version {
-    color: var(--clr-cyan-300);
-  }
-
-  .about {
-    display: grid;
-    position: relative;
-    padding-inline: 2rem;
-    justify-items: center;
-    justify-content: center;
-    align-items: center;
-    margin-block-start: 2rem;
-    margin-block-end: 4rem;
-    text-align: center;
-  }
-
-  .about__imgs {
-    margin-block-end: 4rem;
-  }
-
-  .about__number::before {
-    position: absolute;
-    content: "";
-    display: block;
-    width: 1px;
-    height: 80px;
-    background-color: var(--clr-slate-300);
-    text-align: center;
-    top: 0;
-    left: 50%;
-  }
-
-  .about__number {
-    text-align: center;
-    font-size: 1rem;
-    font-weight: 800;
-    line-height: 1.5;
-    background-color: var(--clr-white);
-    color: var(--clr-slate-600);
-    padding: 1rem;
-    border: 1px solid var(--clr-cyan-300);
-    border-radius: 100%;
-    width: 56px;
-    height: 56px;
-  }
-
-  .about__number-wrapper {
-    margin-bottom: 4rem;
-    padding-top: 5rem;
-  }
-
-  .about__title {
-    color: var(--clr-slate-900);
-    font-size: 2rem;
-    line-height: 1.1;
-    font-weight: 900;
-    margin-bottom: 2rem;
-  }
-
-  .about__subtitle {
-    text-transform: uppercase;
-    color: var(--clr-cyan-600);
-    line-height: 1.1;
-    font-size: 0.75rem;
-    letter-spacing: 4px;
-    font-weight: 900;
-    margin-bottom: 1rem;
-  }
-
-  .about__text {
-    color: var(--section-text, var(--clr-slate-600));
     font-weight: 600;
     font-size: 1rem;
     line-height: 1.5;
+    color: var(--clr-slate-600);
   }
 
-  .download {
-    background-color: var(--clr-cyan-600);
-    color: var(--clr-white);
+  .hero__title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    line-height: 1.1;
+    color: var(--clr-slate-900);
   }
-}
 
-@layer hero-left {
-  .person-9 {
+  .hero__wrapper {
+    display: grid;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .nav {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    padding-block-start: 3rem;
+  }
+
+  .person {
+    --top: unset;
+    --right: unset;
+    --bottom: unset;
+    --left: unset;
+    --width: 60px;
+    --height: 60px;
+
     position: absolute;
-    bottom: 0;
-    right: 80%;
+    top: var(--top);
+    right: var(--right);
+    bottom: var(--bottom);
+    left: var(--left);
+
+    width: var(--width);
+    height: var(--height);
   }
 
-  .person-12 {
-    position: absolute;
-    bottom: 4.5rem;
-    right: 80%;
+  .person--9 {
+    --bottom: 0;
+    --right: 80%;
   }
 
-  .person-10 {
-    position: absolute;
-    top: 0;
-    right: 40%;
+  .person--12 {
+    --bottom: 4.5rem;
+    --right: 80%;
   }
 
-  .person-7 {
-    position: absolute;
-    top: 4.5rem;
-    right: 40%;
+  .person--10 {
+    --top: 0;
+    --right: 40%;
   }
 
-  .person-11 {
-    position: absolute;
-    top: 1.5rem;
-    right: 1%;
+  .person--7 {
+    --top: 4.5rem;
+    --right: 40%;
   }
 
-  .person-8 {
-    position: absolute;
-    bottom: 0;
-    right: 1%;
+  .person--11 {
+    --top: 1.5rem;
+    --right: 1%;
   }
-}
 
-@layer hero-right {
-  .person-6 {
-    position: absolute;
-    top: 0;
-    left: 0;
+  .person--8 {
+    --bottom: 0;
+    --right: 1%;
+  }
+
+  .person--6 {
+    --top: 0;
+    --left: 0;
   }
 
   .person-3 {
-    position: absolute;
-    left: 0;
-    top: 4.5rem;
+    --left: 0;
+    --top: 4.5rem;
   }
 
   .person-4 {
-    position: absolute;
-    top: 1.5rem;
-    left: 40%;
+    --top: 1.5rem;
+    --left: 40%;
   }
 
   .person-1 {
-    position: absolute;
-    left: 40%;
-    bottom: 0;
+    --left: 40%;
+    --bottom: 0;
   }
 
   .person-5 {
-    position: absolute;
-    left: 80%;
-    top: 0;
+    --left: 80%;
+    --top: 0;
   }
 
   .person-2 {
-    position: absolute;
-    left: 80%;
-    top: 4.5rem;
+    --left: 80%;
+    --top: 4.5rem;
   }
 }

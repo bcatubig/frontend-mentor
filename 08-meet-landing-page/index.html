@@ -13,148 +13,137 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header class="main-header">
-      <img class="logo" src="img/logo.svg" alt="" />
-    </header>
+    <nav class="nav">
+      <a href="#"
+        ><img class="nav__logo" src="img/logo.svg" alt="The main logo"
+      /></a>
+    </nav>
 
-    <div class="l-wrapper">
-      <div class="hero">
-        <div class="hero__left" aria-hidden="true">
-          <picture class="hero__img person-9">
-            <source media="(width > 40rem)" srcset="img/desktop/person-9.png" />
-            <img src="img/mobile/person-9.png" alt="" />
-          </picture>
-          <picture class="hero__img person-12">
-            <source
-              media="(width > 40rem)"
-              srcset="img/desktop/person-12.png"
-            />
-            <img src="img/mobile/person-12.png" alt="" />
-          </picture>
-          <picture class="hero__img person-10">
-            <source
-              media="(width > 40rem)"
-              srcset="img/desktop/person-10.png"
-            />
-            <img src="img/mobile/person-10.png" alt="" />
-          </picture>
-          <picture class="hero__img person-7">
-            <source media="(width > 40rem)" srcset="img/desktop/person-7.png" />
-            <img src="img/mobile/person-7.png" alt="" />
-          </picture>
-          <picture class="hero__img person-11">
-            <source
-              media="(width > 40rem)"
-              srcset="img/desktop/person-11.png"
-            />
-            <img src="img/mobile/person-11.png" alt="" />
-          </picture>
-          <picture class="hero__img person-8">
-            <source media="(width > 40rem)" srcset="img/desktop/person-8.png" />
-            <img src="img/mobile/person-8.png" alt="" />
-          </picture>
-        </div>
-        <div class="hero__right" aria-hidden="true">
-          <picture class="hero__img person-6">
-            <source media="(width > 40rem)" srcset="img/desktop/person-6.png" />
-            <img src="img/mobile/person-6.png" alt="" />
-          </picture>
-          <picture class="hero__img person-3">
-            <source media="(width > 40rem)" srcset="img/desktop/person-3.png" />
-            <img src="img/mobile/person-3.png" alt="" />
-          </picture>
-          <picture class="hero__img person-4">
-            <source media="(width > 40rem)" srcset="img/desktop/person-4.png" />
-            <img src="img/mobile/person-4.png" alt="" />
-          </picture>
-          <picture class="hero__img person-1">
-            <source media="(width > 40rem)" srcset="img/desktop/person-1.png" />
-            <img src="img/mobile/person-1.png" alt="" />
-          </picture>
-          <picture class="hero__img person-5">
-            <source media="(width > 40rem)" srcset="img/desktop/person-5.png" />
-            <img src="img/mobile/person-5.png" alt="" />
-          </picture>
-          <picture class="hero__img person-2">
-            <source media="(width > 40rem)" srcset="img/desktop/person-2.png" />
-            <img src="img/mobile/person-2.png" alt="" />
-          </picture>
-        </div>
-        <div class="hero__body">
-          <h1 class="hero__title">Group Chat for Everyone</h1>
-          <p class="hero__text">
-            Meet makes it easy to connect with others face-to-face virtually and
-            collaborate across any device.
-          </p>
-
-          <div class="button__body">
-            <button class="button button--cyan">
-              Download <span class="button--version">v1.3</span>
-            </button>
-            <button class="button button--purple">What is it?</button>
-          </div>
-        </div>
+    <section class="hero" aria-label="hero">
+      <div class="hero__left" aria-hidden="true">
+        <picture class="person person--9">
+          <source media="(width > 40rem)" srcset="img/desktop/person-9.png" />
+          <img src="img/mobile/person-9.png" alt="" />
+        </picture>
+        <picture class="person person--12">
+          <source media="(width > 40rem)" srcset="img/desktop/person-12.png" />
+          <img src="img/mobile/person-12.png" alt="" />
+        </picture>
+        <picture class="person person--10">
+          <source media="(width > 40rem)" srcset="img/desktop/person-10.png" />
+          <img src="img/mobile/person-10.png" alt="" />
+        </picture>
+        <picture class="person person--7">
+          <source media="(width > 40rem)" srcset="img/desktop/person-7.png" />
+          <img src="img/mobile/person-7.png" alt="" />
+        </picture>
+        <picture class="person person--11">
+          <source media="(width > 40rem)" srcset="img/desktop/person-11.png" />
+          <img src="img/mobile/person-11.png" alt="" />
+        </picture>
+        <picture class="person person--8">
+          <source media="(width > 40rem)" srcset="img/desktop/person-8.png" />
+          <img src="img/mobile/person-8.png" alt="" />
+        </picture>
       </div>
-    </div>
-
-    <div class="l-wrapper">
-      <section class="about">
-        <div class="about__number-wrapper">
-          <p class="about__number">01</p>
-        </div>
-
-        <div class="about__imgs" aria-hidden="true">
-          <picture class="about__img">
-            <source
-              media="(width >= 40rem )"
-              srcset="img/desktop/collage-1.png"
-            />
-            <img src="img/mobile/collage-1.png" alt="" />
-          </picture>
-          <picture class="about__img">
-            <source
-              media="(width >= 40rem )"
-              srcset="img/desktop/collage-2.png"
-            />
-            <img src="img/mobile/collage-2.png" alt="" />
-          </picture>
-          <picture class="about__img">
-            <source
-              media="(width >= 40rem )"
-              srcset="img/desktop/collage-3.png"
-            />
-            <img src="img/mobile/collage-3.png" alt="" />
-          </picture>
-          <picture class="about__img">
-            <source
-              media="(width >= 40rem )"
-              srcset="img/desktop/collage-4.png"
-            />
-            <img src="img/mobile/collage-4.png" alt="" />
-          </picture>
-        </div>
-        <p class="about__subtitle">Built for Modern Use</p>
-        <h2 class="about__title">Smarter meetings, all in one place</h2>
-        <p class="about__text">
-          Send messages, share files, show your screen, and record your meetings
-          — all in one workspace. Control who can join with invite-only team
-          access, data encryption, and data export.
+      <div class="hero__right" aria-hidden="true">
+        <picture class="person person--6">
+          <source media="(width > 40rem)" srcset="img/desktop/person-6.png" />
+          <img src="img/mobile/person-6.png" alt="" />
+        </picture>
+        <picture class="person person--3">
+          <source media="(width > 40rem)" srcset="img/desktop/person-3.png" />
+          <img src="img/mobile/person-3.png" alt="" />
+        </picture>
+        <picture class="person person-4">
+          <source media="(width > 40rem)" srcset="img/desktop/person-4.png" />
+          <img src="img/mobile/person-4.png" alt="" />
+        </picture>
+        <picture class="person person-1">
+          <source media="(width > 40rem)" srcset="img/desktop/person-1.png" />
+          <img src="img/mobile/person-1.png" alt="" />
+        </picture>
+        <picture class="person person-5">
+          <source media="(width > 40rem)" srcset="img/desktop/person-5.png" />
+          <img src="img/mobile/person-5.png" alt="" />
+        </picture>
+        <picture class="person person-2">
+          <source media="(width > 40rem)" srcset="img/desktop/person-2.png" />
+          <img src="img/mobile/person-2.png" alt="" />
+        </picture>
+      </div>
+      <div class="hero__wrapper">
+        <h1 class="hero__title">Group Chat for Everyone</h1>
+        <p class="hero__text">
+          Meet makes it easy to connect with others face-to-face virtually and
+          collaborate across any device.
         </p>
-      </section>
-    </div>
 
-    <section class="download">
-      <div class="download__number-wrapper">
-        <p class="download__number">02</p>
+        <div class="button__wrapper">
+          <button class="button button--cyan">
+            Download <span>v1.3</span>
+          </button>
+          <button class="button button--purple">What is it?</button>
+        </div>
       </div>
-      <h2 class="download__title">Experience more together</h2>
-      <p class="download__text">
-        Stay connected with reliable HD meetings and unlimited one-on-one and
-        group video sessions.
-      </p>
-      <button class="button button--cyan">
-        Download <span class="button--version">v1.3</span>
-      </button>
     </section>
+
+    <!-- <section class="section section--about" aria-label="about">
+          <div class="section__number-wrapper" aria-hidden="true">
+            <p class="section__number">01</p>
+          </div>
+
+          <div class="section__imgs" aria-hidden="true">
+            <picture class="section__img">
+              <source
+                media="(width >= 40rem )"
+                srcset="img/desktop/collage-1.png"
+              />
+              <img src="img/mobile/collage-1.png" alt="" />
+            </picture>
+            <picture class="section__img">
+              <source
+                media="(width >= 40rem )"
+                srcset="img/desktop/collage-2.png"
+              />
+              <img src="img/mobile/collage-2.png" alt="" />
+            </picture>
+            <picture class="section__img">
+              <source
+                media="(width >= 40rem )"
+                srcset="img/desktop/collage-3.png"
+              />
+              <img src="img/mobile/collage-3.png" alt="" />
+            </picture>
+            <picture class="section__img">
+              <source
+                media="(width >= 40rem )"
+                srcset="img/desktop/collage-4.png"
+              />
+              <img src="img/mobile/collage-4.png" alt="" />
+            </picture>
+          </div>
+          <p class="section__subtitle">Built for Modern Use</p>
+          <h2 class="section__title">Smarter meetings, all in one place</h2>
+          <p class="section__text">
+            Send messages, share files, show your screen, and record your
+            meetings — all in one workspace. Control who can join with
+            invite-only team access, data encryption, and data export.
+          </p>
+        </section> -->
+
+    <!-- <section class="section">
+        <div class="section__number-wrapper">
+          <p class="section__number">02</p>
+        </div>
+        <h2 class="section__title">Experience more together</h2>
+        <p class="section__text">
+          Stay connected with reliable HD meetings and unlimited one-on-one and
+          group video sessions.
+        </p>
+        <button class="button button--download">
+          Download <span>v1.3</span>
+        </button>
+      </section> -->
   </body>
 </html>
