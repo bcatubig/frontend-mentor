@@ -119,12 +119,116 @@
 @layer base {
   :root {
     --ff-manrope: "Manrope";
+
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-grey-900: hsl(217, 19%, 35%);
+    --clr-grey-500: hsl(214, 17%, 51%);
+    --clr-grey-400: hsl(212, 23%, 69%);
+    --clr-grey-200: hsl(210, 46%, 95%);
   }
 
   body {
     font-family: "Manrope", sans-serif;
+    background-color: var(--clr-grey-200);
+    color: var(--clr-grey-900);
+  }
+}
+
+@layer layout {
+  .wrapper {
+    max-inline-size: 1230px;
+    margin-inline: auto;
+    padding-inline: 24px;
+  }
+
+  .social__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 48px;
+    align-items: center;
+  }
+
+  .author__wrapper {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .article__wrapper {
+    padding-inline: 30px;
+    margin-top: 2rem;
+    padding-block-end: 18px;
+    max-inline-size: 365px;
   }
 }
 
 @layer components {
+  .article {
+    display: grid;
+    margin-top: 2rem;
+    background-color: var(--clr-white);
+    border-radius: 10px;
+    overflow: hidden;
+
+    @media (width > 48rem) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .article__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    height: 200px;
+
+    @media (width > 48rem) {
+      height: 100%;
+      object-position: center;
+    }
+  }
+
+  .article__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.3;
+    letter-spacing: 0.25px;
+  }
+
+  .article__content {
+    font-size: 13px;
+    color: var(--clr-grey-500);
+    line-height: 1.4;
+    letter-spacing: 0.12%;
+    margin-top: 24px;
+  }
+
+  .article__profile {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+  }
+
+  .article__author {
+    font-size: 13px;
+    line-height: 1.4;
+    font-weight: 700;
+    letter-spacing: 0.12%;
+  }
+
+  .article__date {
+    color: var(--clr-grey-400);
+    font-size: 13px;
+    line-height: 1.4;
+    letter-spacing: 0.12%;
+    font-weight: 500;
+  }
+
+  .article__share {
+    width: 32px;
+  }
+
+  .article__avatar {
+    border-radius: 100%;
+    width: 40px;
+  }
 }
