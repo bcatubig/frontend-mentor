@@ -1,3 +1,43 @@
+@font-face {
+  font-family: "Manrope";
+  src:
+    url("fonts/Manrope-Medium.woff2") format("woff2"),
+    url("fonts/Manrope-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Manrope ExtraLight";
+  src:
+    url("fonts/ManropeExtraLight-Medium.woff2") format("woff2"),
+    url("fonts/ManropeExtraLight-Medium.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src:
+    url("fonts/Manrope-Bold.woff2") format("woff2"),
+    url("fonts/Manrope-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src:
+    url("fonts/ManropeExtraLight-Bold.woff2") format("woff2"),
+    url("fonts/ManropeExtraLight-Bold.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
 @layer reset {
   /* 1. Use a more-intuitive box-sizing model */
   *,
@@ -78,7 +118,11 @@
 
 @layer base {
   :root {
-    --ff-poop: ;
+    --ff-manrope: "Manrope";
+  }
+
+  body {
+    font-family: "Manrope", sans-serif;
   }
 }
 
