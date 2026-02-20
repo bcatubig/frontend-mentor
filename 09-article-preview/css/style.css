@@ -146,6 +146,7 @@
     justify-content: space-between;
     margin-top: 48px;
     align-items: center;
+    /* border: 1px solid red; */
   }
 
   .author__wrapper {
@@ -164,6 +165,7 @@
 
 @layer components {
   .article {
+    position: relative;
     display: grid;
     margin-top: 2rem;
     background-color: var(--clr-white);
@@ -230,5 +232,40 @@
   .article__avatar {
     border-radius: 100%;
     width: 40px;
+  }
+
+  .share {
+    display: none;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: var(--clr-grey-900);
+    color: var(--clr-grey-200);
+  }
+
+  .share__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 30px;
+    padding-block: 22px;
+  }
+
+  .share__icons {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .share__icons > img {
+    width: 20px;
+  }
+
+  .share__text {
+    font-size: 13px;
+    text-transform: uppercase;
+    line-height: 1.4;
+    letter-spacing: 25%;
+    color: var(--clr-grey-400);
   }
 }
